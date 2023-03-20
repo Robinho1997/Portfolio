@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Quizzical</title>
+  <meta name="description" content="Case study page of Project" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__content">
+      <div class="header__logo-container">
+        <div class="header__logo-img-cont">
+          <img src="./assets/img/avatar.jpeg" class="header__logo-img" />
+        </div>
+        <span class="header__logo-sub">Robin Kempen</span>
+      </div>
+      <div class="header__main">
+        <ul class="header__links">
+          <li class="header__link-wrapper">
+            <a href="./index.html" class="header__link"> Home </a>
+          </li>
+          <li class="header__link-wrapper">
+            <a href="./index.html#projects" class="header__link">
+              Projekte
+            </a>
+          </li>
+
+          <li class="header__link-wrapper">
+            <a href="./index.html#about" class="header__link">Über </a>
+          </li>
+
+          <li class="header__link-wrapper">
+            <a href="./index.html#contact" class="header__link"> Kontakt </a>
+          </li>
+        </ul>
+        <div class="header__main-ham-menu-cont">
+          <img src="./assets/svg/ham-menu.svg" alt="hamburger menu" class="header__main-ham-menu" />
+          <img src="./assets/svg/ham-menu-close.svg" alt="hamburger menu close"
+            class="header__main-ham-menu-close d-none" />
+        </div>
+      </div>
+    </div>
+    <div class="header__sm-menu">
+      <div class="header__sm-menu-content">
+        <ul class="header__sm-menu-links">
+          <li class="header__sm-menu-link">
+            <a href="./index.html"> Home </a>
+          </li>
+
+          <li class="header__sm-menu-link">
+            <a href="./index.html#projects"> Projekte </a>
+          </li>
+
+          <li class="header__sm-menu-link">
+            <a href="./index.html#about"> Über </a>
+          </li>
+
+
+          <li class="header__sm-menu-link">
+            <a href="./index.html#contact"> Kontakt </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <section class="project-cs-hero">
+    <div class="project-cs-hero__content">
+      <h1 class="heading-primary">Quizzical</h1>
+      <div class="project-cs-hero__info">
+        <p class="text-primary">
+          Dieses Projekt ist eine Quiz-App, die Fragen von der Open Trivia Database API abruft. Die App ist dafür konzipiert, das Wissen des Benutzers in der Kategorie "Allgemeinwissen" zu testen. Der Benutzer kann für jede Frage eine Antwort auswählen und nach Beantwortung aller Fragen seine Punktzahl überprüfen. <br>
+          Die App wurde mit functional React-Components erstellt.
+        </p>
+      </div>
+      <div class="project-cs-hero__cta">
+        <a href="https://quizzical-magical.netlify.app" class="btn btn--bg" target="_blank">Live Link</a>
+      </div>
+    </div>
+  </section>
+  <section class="project-details">
+    <div class="main-container">
+      <div class="project-details__content">
+        <div class="project-details__showcase-img-cont">
+          <img src="./assets/img/quizzical.png" alt="Project Image" class="project-details__showcase-img" />
+        </div>
+        <div class="project-details__content-main">
+          <div class="project-details__desc">
+            <h3 class="project-details__content-title">Projektübersicht</h3>
+            <p class="project-details__desc-para">
+              <strong>Funktionalität:</strong> <br>
+              Die Hauptfunktionalität des Projekts ist in der App-Komponente implementiert, die als Standardkomponente exportiert wird. Sie enthält die State Variablen started, questions, count, checked und correct.
+              <br><br>
+              Die State Variable "started" speichert den aktuellen Zustand des Quiz, d. h. ob es gestartet wurde oder nicht. Die "questions" State Variable ist ein Array, das fünf Frageobjekte enthält, die von der Open Trivia Database API abgerufen wurden. Jedes Frageobjekt hat eine ID, Antworten (eine gemischte Liste aller möglichen Antworten), Frage, Correct (die richtige Antwort), Selected (die vom Benutzer ausgewählte Antwort) und Checked (ein Boolescher Wert, der angibt, ob der Benutzer seine Antwort ausgewählt hat).
+              <br><br>
+              Die "count" State Variable speichert die Anzahl der Rendervorgänge der Komponente und wird verwendet, um den useEffect-Hook auszulösen, der neue Fragen von der API abruft, wenn der Benutzer auf die Schaltfläche "Erneut spielen" klickt.
+              <br><br>
+              Die "checked" State Variable speichert anhand einer boolean den Zustand, ob der Benutzer seine Antworten ausgewählt hat. 
+              Die "correct" Variable speichert die Anzahl der vom Benutzer ausgewählten korrekten Antworten.
+              <br><br>
+              Die Komponente enthält mehrere Funktionen, die die Quiz-Logik implementieren. Die "shuffleArray" Funktion mischt das Antwortarray jedes Frageobjekts. Die "handleCheck" Funktion überprüft, ob der Benutzer alle Fragen beantwortet hat, und setzt die "checked"- und "correct" State Variablen. Die "handleClickAnswer" Funktion aktualisiert die ausgewählte Eigenschaft des Frageobjekts, wenn der Benutzer eine Antwort auswählt. Die "handlePlayAgain" Funktion setzt die "checked" State Variable zurück und erhöht die "count" State Variable, um neue Fragen von der API abzurufen.
+              <br><br>
+              App.jsx enthält auch einen useEffect-Hook, der Fragen von der API abruft, wenn sich die count Variable ändert.
+              <br><br>
+              Die Komponente rendert entweder die StartPage- oder Question-Komponenten, abhängig vom Wert der "started" State Variable. Die Question-Komponente zeigt jede Frage mit ihren Antwortoptionen an und ermöglicht dem Benutzer, eine Antwort auszuwählen. Nachdem der Benutzer alle Fragen beantwortet hat, werden die Punktzahl und die Schaltfläche "Erneut spielen" oder "Antwort überprüfen" angezeigt.
+            </p>
+            <br>
+            <p class="project-details__desc-para">
+              <strong>Fazit:</strong> <br>
+              Dieses Projekt demonstriert den Einsatz von React-Zustandsvariablen, useEffect-Hooks und Ereignisbehandlung zum Erstellen einer Quiz-App, die Fragen von einer externen API abruft. Es bietet ein Beispiel dafür, wie man Arrays mischt und Eigenschaften von Objekten in React-Komponenten aktualisiert.
+            </p>
+          </div>
+          <div class="project-details__tools-used">
+            <h3 class="project-details__content-title">Tools Used</h3>
+            <div class="skills">
+              <div class="skills__skill">React</div>
+              <div class="skills__skill">API</div>
+              <div class="skills__skill">GIT</div>
+              <div class="skills__skill">HTML</div>
+              <div class="skills__skill">CSS</div> 
+            </div>
+          </div>
+          <div class="project-details__links">
+            <h3 class="project-details__content-title">See Live</h3>
+            <a href="https://quizzical-magical.netlify.app" class="btn btn--med btn--theme project-details__links-btn"
+              target="_blank">Live Link</a>
+            <a href="https://github.com/Robinho1997/quizzical"
+              class="btn btn--med btn--theme-inv project-details__links-btn" target="_blank">Code Link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="main-footer">
+    <div class="main-container">
+      <div class="main-footer__upper">
+        <div class="main-footer__row main-footer__row-1">
+          <h2 class="heading heading-sm main-footer__heading-sm">
+            <span>Social</span>
+          </h2>
+          <div class="main-footer__social-cont">
+           
+            <a target="_blank" rel="noreferrer" href="https://github.com/Robinho1997">
+              <img class="main-footer__icon" src="./assets/img/github-ico.png" alt="icon" />
+            </a>
+          </div>
+        </div>
+        <div class="main-footer__row main-footer__row-2">
+          <h4 class="heading heading-sm text-lt">Robin Kempen</h4>
+          <p class="main-footer__short-desc">
+            Sie haben Tipps oder Vorschläge wie ich dieses Projekt verbessern kann? Lassen Sie es mich gerne wissen!
+          </p>
+        </div>
+      </div>
+
+      <div class="main-footer__lower">
+        &copy; Copyright 2023. Made by Robin Kempen
+      </div>
+    </div>
+  </footer>
+  <script src="./index.js"></script>
+</body>
+
+</html>

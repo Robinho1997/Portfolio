@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tenzies</title>
+    <meta name="description" content="Case study page of Project" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/img/avatar.jpeg"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Robin Kempen</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projekte
+              </a>
+            </li>
+             <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">Über </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Kontakt </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projekte </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> Über </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Kontakt </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Tenzies Würfel Spiel</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            Dieses Projekt ist eine React-basierte Webanwendung, die ein einfaches Würfelspiel namens Tenzies implementiert. Ziel des Spiels ist es zehn Würfel zu werfen bis alle die gleiche Augenzahl anzeigen. Der Benutzer kann sich dafür entscheiden einen Würfel "festzuhalten", was bedeutet dass er beim nächsten Zug nicht erneut gewürfelt wird. Wenn der Benutzer das Spiel gewinnt indem alle zehn Würfel die gleiche Augenzahl zeigen erfolgt eine Konfetti-Animation. Darüber hinaus wird die Zeit und die Anzahl der Würfe angezeigt, die der Benutzer benötigt hat.
+          </p>
+        </div>
+        <div class="project-cs-hero__cta">
+          <a href="https://roll-til-tenzies.netlify.app" class="btn btn--bg" target="_blank">Live Link</a>
+        </div>
+      </div>
+    </section>
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__showcase-img-cont">
+            <img
+              src="./assets/img/tenzies.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
+            />
+          </div>
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Projektübersicht</h3>
+              <p class="project-details__desc-para">
+               <strong>Funktionalität:</strong>  <br>
+                Die Hauptfunktionalität des Projekts wird in der App-Komponente implementiert, die als Standardkomponente exportiert wird. Sie enthält die State Variablen count, dice, tenzies, startGame und endGame. Die "count" State Variable speichert die Anzahl der Würfe des Benutzers. Die "dice" State Variable ist ein Array welches zehn Würfelobjekte enthält, von denen jedes eine "value", "isHeld" und "Id" Eigenschaft hat. Die "tenzies" State Variable ist ein boolescher Wert, der anzeigt, ob der Benutzer das Spiel gewonnen hat. Die "startGame" und "endGame" State Variablen speichern die Zeit, zu der das Spiel begann und endete.
+                <br><br>
+                "App.jsx" enthält mehrere Funktionen, die die Spiellogik implementieren. Die Funktion "allNewDice" generiert ein neues Array mit zehn Würfelobjekten mit zufälligen Werten und die Funktion "generateNewDie" generiert ein einzelnes Würfelobjekt mit einem zufälligen Wert zwischen 1 und 6. Die "rollDice" Funktion würfelt die Würfel, indem sie neue Würfel für alle Würfel generiert, die nicht gehalten werden, und inkrementiert die "count" State Variable. Wenn der Benutzer das Spiel gewonnen hat, setzt die Funktion das Spiel zurück indem sie neue Würfel generiert und die "count", "startGame" und "tenzies" State Variablen zurücksetzt. Die Funktion "holdDice" toggelt die "isHeld" Eigenschaft eines Würfelobjekts mithilfe der angegebenen Id.
+                <br><br>
+                Die Komponente enthält auch einen useEffect-Hook, der jedes Mal ausgeführt wird wenn sich die "dice" State Variable ändert. Dieser Hook prüft, ob alle Würfel gehalten werden und die gleiche Augenzahl haben und setzt gegebenenfalls die "tenzies" und "endGame" State Variablen auf einen neuen Wert.
+                <br><br>
+                Zudem rendert die Komponente eine Überschrift, Anweisungen, Würfel-Elemente und einen Button. Wenn der Benutzer das Spiel gewonnen hat, werden eine Konfetti-Animation und eine Nachricht angezeigt, welche die Zeit und die Anzahl der Würfe darsellt die benötigt wurden um zu gewinnen.            
+              </p> <br>
+              <p class="project-details__desc-para">
+                <strong>Fazit:</strong> <br>
+                Dieses Projekt ist eine einfache aber unterhaltsame Implementierung des Tenzies-Würfelspiels mit React. Es demonstriert die Verwendung von Zustandsvariablen, useEffect-Hooks und event-handling in React und bietet ein Beispiel dafür wie man ein einfaches Spiel mit React-Komponenten implementieren kann.
+              </p>
+            </div>
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools Used</h3>
+              <div class="skills">
+                <div class="skills__skill">HTML</div>
+                <div class="skills__skill">CSS</div>
+                <div class="skills__skill">JavaScript</div>
+                <div class="skills__skill">React</div>
+              </div>
+            </div>
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">See Live</h3>
+              <a
+                href="https://roll-til-tenzies.netlify.app"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+                >Live Link</a
+              >
+              <a
+                href="https://github.com/Robinho1997/tenzies-game"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank"
+                >Code Link</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+           
+              <a target="_blank" rel="noreferrer" href="https://github.com/Robinho1997">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/img/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Robin Kempen</h4>
+            <p class="main-footer__short-desc">
+              Sie haben Tipps oder Vorschläge wie ich dieses Projekt verbessern kann? Lassen Sie es mich gerne wissen!
+            </p>
+          </div>
+        </div>
+
+        <div class="main-footer__lower">
+          &copy; Copyright 2023. Made by Robin Kempen
+        </div>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Wetter App</title>
+    <meta name="description" content="Case study page of Project" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/img/avatar.jpeg"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Robin Kempen</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projekte
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">Über </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Kontakt </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projekte </a>
+            </li>
+            
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> Über </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Kontakt </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Wetter App</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            Dieses Projekt ist eine Webanwendung, welche Wetterdaten auf Basis des vom Benutzer eingegebenen Stadtnamens abruft und anzeigt. Die App verwendet die OpenWeatherMap-API, um die Daten für die Stadt abzurufen und zeigt die Temperatur, Luftfeuchtigkeit, Windgeschwindigkeit und ein Wettericon an. Das Hintergrundbild der App ändert sich je nach gesuchter Stadt. 
+          </p>
+        </div>
+        <div class="project-cs-hero__cta">
+          <a href="https://robinho1997.github.io/weather-application/" class="btn btn--bg" target="_blank">Live Link</a>
+        </div>
+      </div>
+    </section>
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__showcase-img-cont">
+            <img
+              src="./assets/img/wetter.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
+            />
+          </div>
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Projektübersicht</h3>
+              <p class="project-details__desc-para">
+                <strong>Funktionalität:</strong> <br>
+               Der JavaScript-Code enthält ein Objekt namens "weather", das drei Methoden enthält: fetchWeather, displayWeather und searchWeather.
+                <br><br>
+                <strong>fetchWeather:</strong>
+                Diese Methode nimmt den vom Benutzer eingegebenen Stadtnamen entgegen und ruft die Wetterdaten für diese Stadt über die OpenWeatherMap-API ab. Sie verwendet die apiKey-Eigenschaft des "weather"-Objekts zur Authentifizierung des API-Aufrufs. Sobald die Daten abgerufen sind, ruft sie die Methode "displayWeather" auf und übergibt die Daten als Argument.
+                <br><br>
+                <strong>displayWeather:</strong>
+                Diese Methode nimmt die vom API abgerufenen Wetterdaten entgegen und zeigt sie auf der Webseite an. Sie extrahiert die relevanten Daten aus der Antwort mit Hilfe der Destrukturierung und aktualisiert die entsprechenden Elemente des HTML-DOMs mit den Daten.
+                <br><br>
+                <strong>searchWeather:</strong>
+                Diese Methode wird aufgerufen, wenn der Benutzer auf die Such-Schaltfläche klickt oder nach der Eingabe des Stadtnamens in der Suchleiste die Eingabetaste drückt. Sie ruft die Methode "fetchWeather" mit dem Wert des Suchleisten-Inputs als Argument auf.
+                <br><br>
+                Beim Laden der Seite wird die Methode "fetchWeather" mit einem Standardwert von Berlin ausgeführt.
+              </p>
+              <p class="project-details__desc-para">
+                <strong>Fazit:</strong><br>
+                Zusammenfassend demonstriert dieses Projekt die Fähigkeit, eine externe API in eine Webanwendung zu integrieren und die Daten so zu manipulieren, dass sie benutzerfreundlich angezeigt werden. Die Verwendung von objektorientierter Programmierung mit dem "weather"-Objekt und seinen Methoden verbessert die Lesbarkeit und Organisation des Codes. Die Event-Listener für die Suchleiste und die Suchschaltfläche sorgen für eine nahtlose Benutzererfahrung. Insgesamt präsentiert dieses Projekt die Fähigkeiten und Kenntnisse, die erforderlich sind, um eine funktionale und interaktive Webanwendung mit HTML, CSS und JavaScript zu erstellen.
+              </p>
+            </div>
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools Used</h3>
+              <div class="skills">
+                <div class="skills__skill">JavaScript</div>
+                <div class="skills__skill">API</div>
+                <div class="skills__skill">GIT</div>
+                <div class="skills__skill">HTML</div>
+                <div class="skills__skill">CSS</div>
+              </div>
+            </div>
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">See Live</h3>
+              <a
+                href="https://robinho1997.github.io/weather-application/"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+                >Live Link</a
+              >
+              <a
+                href="https://github.com/Robinho1997/weather-application"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank"
+                >Code Link</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+             
+              <a target="_blank" rel="noreferrer" href="https://github.com/Robinho1997">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/img/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+             
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Robin Kempen</h4>
+            <p class="main-footer__short-desc">
+              Sie haben Tipps oder Vorschläge wie ich dieses Projekt verbessern kann? Lassen Sie es mich gerne wissen!
+            </p>
+          </div>
+        </div>
+
+        <div class="main-footer__lower">
+          &copy; Copyright 2023. Made by Robin Kempen
+        </div>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>

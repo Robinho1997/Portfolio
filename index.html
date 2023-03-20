@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Portfolio Robin Kempen</title>
+    <meta name="description" content="Portfolio Template for Developer" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/img/avatar.jpeg"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Robin Kempen</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projekte
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">Über </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Kontakt </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> Über </a>
+            </li>
+            
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projekte </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Kontakt </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="home-hero">
+      <div class="home-hero__content">
+        <h1 class="heading-primary">Hey, mein Name ist <br> Robin Kempen </h1>
+        <div class="home-hero__info">
+          <p class="text-primary">
+            Ich bin ein leidenschaftlicher <strong class="bigger">Frontend Developer</strong> aus der Nähe von Bonn. Mir macht es einfach Spaß Probleme zu lösen und mehr über Technologien zu lernen.
+           <br><br>
+            Vorallem macht es mir Freude mit <strong>React JS</strong> und
+            <strong>API's</strong> zu arbeiten sowie Apps zu entwickeln die intuitiv zu handhaben sind.
+          </p>
+        </div>
+        <div class="home-hero__cta">
+          <a href="./#projects" class="btn btn--bg">Schauen Sie sich meine Projekte an</a>
+        </div>
+      </div>
+      <div class="home-hero__socials">
+       
+        <div class="home-hero__social">
+          <a href="https://github.com/Robinho1997" class="home-hero__social-icon-link" target="_blank">
+            <img
+              src="./assets/img/github-ico.png"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="home-hero__mouse-scroll-cont">
+        <div class="mouse"></div>
+      </div>
+    </section>
+    
+    
+        <section id="projects" class="projects sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-bg">
+          <span class="heading-sec__main">Projekte</span>
+          <span class="heading-sec__sub">
+            Alle meine Projekte verfügen über Links die zum Code sowie der Live Version führen. Klicken Sie auf den Button um mehr über ein bestimmtes Projekt zu erfahren.
+            
+          </span>
+        </h2>
+
+        <div class="projects__content">
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/img/quizzical.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Quizzical </h3>
+              <p class="projects__row-content-desc">
+                Quizzical ist eine Quiz-App, die mit React erstellt wurde und Fragen von der Open Trivia Database API abruft. Die App ist dafür konzipiert, das Wissen des Benutzers in der Kategorie "Allgemeinwissen" zu testen. Der Benutzer kann für jede Frage eine Antwort auswählen und nach Beantwortung aller Fragen seine Punktzahl überprüfen.
+                
+              </p>
+              <a
+                href="./quizzical.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                >Mehr erfahren</a
+              >
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/img/tenzies.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Tenzies </h3>
+              <p class="projects__row-content-desc">
+                Dieses Projekt ist eine React-basierte Webanwendung, die ein einfaches Würfelspiel namens Tenzies implementiert. Ziel des Spiels ist es, zehn Würfel zu werfen, bis alle die gleiche Augenzahl anzeigen. Der Benutzer kann sich dafür entscheiden, einen Würfel "festzuhalten", was bedeutet, dass er beim nächsten Zug nicht erneut gewürfelt wird. Wenn der Benutzer das Spiel gewinnt, indem alle zehn Würfel die gleiche Augenzahl zeigen, wird eine Konfetti-Animation, sowie die Zeit und Anzahl der Würfe, die benötigt wurden, um zu gewinnen angezeigt.
+              </p>
+              <a
+                href="./tenzies.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                >mehr erfahren</a
+              >
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/img/password-generator.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Passwort Generator</h3>
+              <p class="projects__row-content-desc">
+                Dieses Projekt ist eine webbasierte Anwendung, die fünf zufällige Passwörter auf der Grundlage von vom Benutzer spezifizierten Optionen generiert. Die Passwörter werden unter Verwendung einer Kombination aus Klein- und Großbuchstaben, Zahlen und Symbolen generiert. 
+                Die App wurde mit HTML, CSS und JavaScript erstellt. Sie verfügt über eine einfache Benutzeroberfläche, die es dem Benutzer ermöglicht, die Passwortlänge sowie Optionen für die Einbeziehung von Großbuchstaben, Zahlen und Symbolen auszuwählen.
+              </p>
+              <a
+                href="./password-generator.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                >Mehr erfahren</a
+              >
+            </div>
+            
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/img/wetter.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Wetter App</h3>
+              <p class="projects__row-content-desc">
+                Dieses Projekt ist eine Webanwendung, die Wetterdaten auf Basis des vom Benutzer eingegebenen Stadtnamens abruft und anzeigt. Die App verwendet die OpenWeatherMap-API, um die Daten für die Stadt abzurufen und zeigt die Temperatur, Luftfeuchtigkeit, Windgeschwindigkeit und das Wettericon an. Das Hintergrundbild der App ändert sich je nach gesuchter Stadt. 
+              </p>
+              <a
+                href="./weather-app.html"
+                class="btn btn--med btn--theme dynamicBgClr"
+                >Mehr erfahren</a
+              >
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    <section id="about" class="about sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main">Über mich</span>
+          <span class="heading-sec__sub">
+            <p>
+              Ich sehe mich als bescheidene Person, die gerne im Hintergrund arbeitet, aber gleichzeitig auch ein guter Teamplayer ist. Ich bin immer bestrebt, von anderen zu lernen und mich weiterzuentwickeln und ich schätze konstruktives Feedback, um meine Arbeit zu verbessern.
+               <br><br>
+              Meine Stärken sind <strong>Teamwork</strong>, <strong>Problemlösung</strong> und <strong>Geduld</strong>. <br>
+            </p>
+          </span>
+        </h2>
+        <div class="about__content">
+          <div class="about__content-main">
+            <h3 class="about__content-title">Lernen Sie mich kennen!</h3>
+            <div class="about__content-details">
+              <p class="about__content-details-para">
+                In meiner Freizeit genieße ich es Zeit in der Natur zu verbringen. Da ich ein Mensch bin der Ruhe sehr zu schätzen weiß , kann ich mich in der Natur gut vom Alltagslärm lösen und meine Batterien wieder aufladen. 
+                <br>
+                 Ich bin ein begeisterter Angler und genieße es, Zeit am Rhein zu verbringen. 
+                <br><br>
+                Außerdem kümmere ich mich gerne um meine Katze und meine Aquarien.
+              </p>
+            </div>
+            <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
+              >Kontakt</a
+            >
+          </div>
+          <div class="about__content-skills">
+            <h3 class="about__content-title">Meine Skills</h3>
+            <div class="skills">
+              <div class="skills__skill">HTML</div>
+              <div class="skills__skill">CSS</div>
+              <div class="skills__skill">JavaScript</div>
+              <div class="skills__skill">React</div>
+              <div class="skills__skill">Git</div>
+              <div class="skills__skill">Figma</div>
+              <div class="skills__skill">Github</div>
+              <div class="skills__skill">API</div>
+              <div class="skills__skill">Problemlösung</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+
+    
+    
+    <section id="contact" class="contact sec-pad dynamicBg">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main heading-sec__main--lt">Kontakt</span>
+          <span class="heading-sec__sub heading-sec__sub--lt">
+            Melden Sie sich gerne bei mir sollten Sie Fragen haben!
+            Ich würde mich sehr freuen an einem Video Call teilzunehmen und über Ideen und Projekte zu diskutieren.
+            <br>
+            Schreiben Sie mir eine <br>E-Mail: robinkempen1997@gmail.com <br> oder rufen Sie mich an unter +49 162 9817464 
+          </span>
+        </h2>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+             
+              <a target="_blank" rel="noreferrer" href="https://github.com/Robinho1997">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/img/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Robin Kempen</h4>
+            <p class="main-footer__short-desc">
+              Vielen Dank das Sie sich die Zeit genommen haben mein Portfolio anzuschauen!
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
